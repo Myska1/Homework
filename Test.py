@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 
 proxy = {"https": "http://webproxy-fra.deutsche-boerse.de:8080"}
 url = "http://cernyrytir.cz/index.php3?akce=100&sekce=mtg&podsekce=display"
+url = "https://www.mtggoldfish.com/spoilers/Ultimate+Masters"
+
 response = requests.get(url, proxies = proxy)
 soup = BeautifulSoup(response.text, "html.parser")
 
