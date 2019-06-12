@@ -1,13 +1,14 @@
-import requests
-from requests import get
-from requests.exceptions import RequestException
-from contextlib import closing
-from bs4 import BeautifulSoup
+import time
+from selenium import webdriver
 
-proxy = {"https": "http://webproxy-fra.deutsche-boerse.de:8080"}
-url = "http://cernyrytir.cz/index.php3?akce=100&sekce=mtg&podsekce=display"
-url = "https://www.mtggoldfish.com/spoilers/Ultimate+Masters"
 
-response = requests.get(url, proxies = proxy)
-soup = BeautifulSoup(response.text, "html.parser")
+driver = webdriver.Chrome(executable_path=r"C:\Users\pf932\Homework\chromedriver.exe")
+#driver = webdriver.Chrome('C:\Users\pf932\Homework')  # Optional argument, if not specified will search path.
+driver.get('http://www.google.com/xhtml');
+time.sleep(5) # Let the user actually see something!
+search_box = driver.find_element_by_name('q')
+search_box.send_keys('ChromeDriver')
+search_box.submit()
+time.sleep(5) # Let the user actually see something!
+driver.quit()
 
