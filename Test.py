@@ -3,7 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-browser = webdriver.Chrome(executable_path=r"C:\Users\pf932\Homework\chromedriver.exe")
+#browser = webdriver.Chrome(executable_path=r"C:\Users\pf932\Homework\chromedriver.exe")
+browser = webdriver.Chrome(executable_path=r"/Users/myska/Documents/Python/Homework/chromedriver")
 browser.get('https://www.alza.cz/')
 
 #selecting a link for Electro mobile cathegory
