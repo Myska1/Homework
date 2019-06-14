@@ -1,6 +1,9 @@
+# coding=utf-8
+
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+
 
 browser = webdriver.Chrome(executable_path=r"/Users/myska/Documents/Python/Homework/chromedriver")
 browser.get('http://www.impuls.cz/souteze/hti-milionovy-zavod/')
@@ -12,7 +15,7 @@ name = browser.find_element_by_id("name1")
 name.send_keys("Lucie")
 
 surname = browser.find_element_by_id("name2")
-surname.send_keys("Cepáková")
+surname.send_keys("Cepakova")
 
 age = browser.find_element_by_id("age")
 age.send_keys("33")
